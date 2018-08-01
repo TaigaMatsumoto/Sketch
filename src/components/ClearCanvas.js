@@ -2,7 +2,7 @@ import React from 'react'
 
 const ClearCanvas = (props) => {
     return(
-        <div onClick = {(e) => props.sketchData.clear()}>Clear</div>
+        <div style={{textAlign: "center"}}onClick = {(e) => props.sketchData.clear()}>Clear</div>
     )
 }
 

@@ -13,8 +13,8 @@ class Sketch extends React.Component {
         return (
             <SketchField 
                 ref = {this.sketchRef}            
-                width='300px' 
-                height='300px' 
+                width='400px' 
+                height='400px' 
                 tool={Tools.Pencil} 
                 className = "SketchField"
                 lineColor= {this.props.penColor}

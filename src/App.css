@@ -1,6 +1,22 @@
 .App {
+    /* text-align: center; */
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10px 1fr 1fr;
+    grid-template-areas: 
+    "title ."
+    "canvas pallets"
+    "canvas buttons";
+    /* margin: 0 auto; */
+  }
+  .title{
+    grid-area: title;
     text-align: center;
-    margin: 0 auto;
+  }
+  .canvas{
+    grid-area: canvas;
+    padding-top: 15%;
   }
   .SketchField{
     margin: auto;
@@ -8,38 +24,63 @@
     margin-bottom: 5%;
     border: solid 1px black;
   } 
+  .buttons{
+    grid-area: buttons;
+    margin: auto;
+   
+  }
   .pallets{
-    height: 100px;
-    width: 100px;
-    background-color: aqua;
+    width: 80%;
+    margin-top: 10%;
+    padding-top: 5%;
+    grid-area: pallets;
+    border: solid 3px black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    ". black-pallet white-pallet blue-pallet ."
+    ". green-pallet red-pallet yellow-pallet .";
   } 
   .black-color-pallet{
+    grid-area:black-pallet;
     height:80px;
     width: 80px;
     background-color: black;
+    border: solid 1px black;
   }
   .white-color-pallet{
+    grid-area:white-pallet;
     height:80px;
     width: 80px;
     background-color: white;
+    border: solid 1px black;
+  }
+  .red-color-pallet{
+    grid-area:red-pallet;
+    height:80px;
+    width: 80px;
+    background-color: red;
+    border: solid 1px black;
   }
   .blue-color-pallet{
+    grid-area:blue-pallet;
     height:80px;
     width: 80px;
     background-color: blue;
+    border: solid 1px black;
   }
   .green-color-pallet{
+    grid-area:green-pallet;
     height:80px;
     width: 80px;
     background-color: green;
-  }
-  .black-color-pallet{
-    height:80px;
-    width: 80px;
-    background-color: black;
+    border: solid 1px black;
   }
   .yellow-color-pallet{
+    grid-area:yellow-pallet;
     height:80px;
     width: 80px;
     background-color: yellow;
+    border: solid 1px black;
   }

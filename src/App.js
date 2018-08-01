@@ -13,7 +13,7 @@ class App extends Component {
     this.state = {
       sketchData: "",
       sketch: {
-        penColor: "pink"
+        penColor: "black"
       },
       user: {
         finalSketch: ""
@@ -63,19 +63,24 @@ class App extends Component {
     return (
     
       <div className="App">
-        {/* <Route exact path='/game.html' component={MyCanvas} /> */}
+      <div className="title">
+        <h1>Easy canvas</h1>
+        </div>
+        <div className="canvas">
+        <Sketch updateSketch={this.updateSketch} className = "SketchField" penColor={this.state.sketch.penColor}/>
+         </div>
           <Pallets 
           changeColor = {this.changeColor}
           style={{background: "grey", width: "30px", height: "30px"}}
           />
-        <Sketch updateSketch={this.updateSketch} className = "SketchField" penColor={this.state.sketch.penColor}/>
+        
+        <div className = "buttons">
         <ClearCanvas sketchData = {this.state.sketchData} />
         <Button 
           onClick={this.handleClick}
           penColor={this.state.sketch.penColor}
           >Download!</Button>
-
-        
+        </div>
         </div>
      
     );
